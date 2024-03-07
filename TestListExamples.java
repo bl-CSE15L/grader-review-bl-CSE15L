@@ -22,7 +22,7 @@ public class TestListExamples {
         input2.add("rat");
     }
 
-    @Test
+    @Test(timeout = 500)
     public void testFilter() {
         List<String> expected = new ArrayList<>();
         expected.add("apple");
@@ -31,7 +31,7 @@ public class TestListExamples {
         assertArrayEquals(expected.toArray(), (ListExamples.filter(input1, containsAP)).toArray());
     }
 
-    @Test
+    @Test(timeout = 500)
     public void testMerge() {
         List<String> expected = new ArrayList<>();
         expected.add("apple");
